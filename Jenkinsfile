@@ -25,7 +25,7 @@ pipeline {
                         sh 'terraform init && terraform plan && terraform apply --auto-approve'
 
                     } else if (params.action == 'destroy') {
-                        sh 'terraform init terraform plan && terraform destroy --auto-approve'
+                        sh 'terraform init && terraform plan && terraform destroy --auto-approve'
                     } else {
                         error "Invalid action selected. Please choose either 'apply' or 'destroy'."
                     }
