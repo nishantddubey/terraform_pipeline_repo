@@ -14,7 +14,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout your Terraform code from Git
-                git 'https://github.com/nishantddubey/terraform_pipeline_repo.git'
+                git branch: 'main', url: 'https://github.com/nishantddubey/terraform_assignment.git'
             }
         }
             stage('Apply / Destroy') {
